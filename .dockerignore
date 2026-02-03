@@ -1,0 +1,24 @@
+# Docker ignore file - keeps image size small
+.git
+.gitignore
+.venv
+venv
+env
+*.pyc
+__pycache__
+.pytest_cache
+.ruff_cache
+.mypy_cache
+*.egg-info
+.coverage
+htmlcov
+.env
+.env.local
+*.md
+!README.md
+tests/
+.vscode
+.idea
+*.log
+.DS_Store
+Thumbs.db

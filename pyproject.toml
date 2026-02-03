@@ -1,0 +1,19 @@
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+# Big Tech Standard Rules
+select = [
+    "E",    # Style errors
+    "F",    # Logical errors (Pyflakes)
+    "UP",   # Upgrade (auto-modernize code)
+    "I",    # Isort (sort imports)
+    "B",    # Bugbear (common design flaws)
+    "ASYNC",# FastAPI/Async safety
+    "T20",  # Forbid print statements (use logging!)
+]
+ignore = ["E501"] # Line length is handled by the formatter
+
+[tool.ruff.format]
+quote-style = "double"

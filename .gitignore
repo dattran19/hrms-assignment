@@ -1,4 +1,5 @@
 # Python
+__pycache__/
 *.py[cod]
 *$py.class
 *.so
@@ -21,15 +22,6 @@ share/python-wheels/
 *.egg
 MANIFEST
 
-# Django
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
-/media
-/staticfiles
-/static
-
 # Virtual Environment
 venv/
 env/
@@ -38,6 +30,13 @@ env.bak/
 venv.bak/
 .venv/
 
+# Environment variables - CRITICAL: Keep secrets out of git!
+.env
+.env.local
+.env.*.local
+*.env
+!.env.example
+
 # IDE
 .vscode/
 .idea/
@@ -45,11 +44,7 @@ venv.bak/
 *.swo
 *~
 .DS_Store
-
-# Environment variables
-.env
-.env.local
-.env.*.local
+*.code-workspace
 
 # Testing
 .coverage
@@ -57,28 +52,39 @@ venv.bak/
 htmlcov/
 .tox/
 .nox/
+coverage.xml
+*.cover
+.hypothesis/
 
-# Migrations (optional - uncomment if you don't want to track migrations)
-# **/migrations/*.py
-# !**/migrations/__init__.py
-
-# Cache
-__pycache__/
-*.pyc
-.cache/
-
-# Celery
-celerybeat-schedule
-celerybeat.pid
+# Linting & Formatting
+.ruff_cache/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pylint.d/
 
 # Database
 *.db
 *.sqlite
 *.sqlite3
+*.db-journal
+
+# Logs
+*.log
+logs/
+
+# Cache
+.cache/
 
 # Backup files
 *.bak
+*.tmp
+*.temp
+*~
 
 # OS
 Thumbs.db
 .DS_Store
+
+# Optional: Uncomment if you don't want to track AI/agent artifacts
+# .agent/
